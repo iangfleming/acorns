@@ -1,7 +1,7 @@
 // @iangfleming's personal helpers
 
 @for $i from 1 through 10 {
-  // padding
+// padding
   .p#{$i} {
     padding: 1rem * $i;
   }
@@ -19,7 +19,7 @@
   .pt#{$i} {
     padding-top: 1rem * $i;
   }
-  // margin
+// margin
   .m#{$i} {
     margin: 1rem * $i;
   }
@@ -38,3 +38,36 @@
     margin-top: 1rem * $i;
   }
 }
+
+// Display
+
+.hidden {
+  display: none;
+}
+.db {
+  display: block;
+}
+.di {
+  display: inline;
+}
+.dib {
+  display: inline-block;
+}
+
+// Position
+
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+
+// Float
+
+.fl { float: left; }
+.fr { float: right; }
+.oh { overflow: hidden; }
