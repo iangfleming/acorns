@@ -1,5 +1,10 @@
 // @iangfleming's personal helpers
-
+.p0 {
+  padding: 0 !important;
+}
+.m0 {
+  margin: 0 !important;
+}
 @for $i from 1 through 10 {
 // padding
   .p#{$i} {
@@ -75,3 +80,23 @@
 // Text Modifiers
 .thin { font-weight: 100; }
 .center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
+.italic { font-style: italic; }
+
+// Textarea
+.clean-text {
+  border: none;
+  border-image: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Size
+.full {
+  width: 100%;
+}
