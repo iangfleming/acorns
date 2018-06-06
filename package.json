@@ -1,0 +1,38 @@
+{
+  "name": "acorns",
+  "version": "1.0.0",
+  "description": "Light and composable CSS utility classes for building quickly",
+  "main": "acorns.css",
+  "scripts": {
+    "build-task:scss-compile": "node-sass-chokidar --source-map true src/ -o dist/",
+    "build-task:autoprefixer": "postcss dist/*.css --use autoprefixer -d dist/",
+    "sass:build": "npm-run-all -p build-task:*",
+    "sass:watch": "chokidar 'src/**/*.scss' -c 'npm run sass:build'",
+    "dev": "npm-run-all -p sass:*",
+    "minify": "css-minify -f dist/acorns.css",
+    "prepublishOnly": "run-s sass:build minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iangfleming/acorns.git"
+  },
+  "keywords": [
+    "css",
+    "utilities",
+    "atomic"
+  ],
+  "author": "Ian Fleming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iangfleming/acorns/issues"
+  },
+  "homepage": "https://github.com/iangfleming/acorns#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.6.0",
+    "chokidar-cli": "^1.2.0",
+    "css-minify": "^1.0.1",
+    "node-sass-chokidar": "^1.3.0",
+    "npm-run-all": "^4.1.3",
+    "postcss-cli": "^5.0.0"
+  }
+}
